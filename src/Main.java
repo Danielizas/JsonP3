@@ -1,10 +1,13 @@
+import Modelos.ResultSets;
 import com.google.gson.*;
-import Modelos.*;
+
 public class Main {
     public static void main(String[] args) {
         Gson gs = new Gson();
-        ResultSet objeto = gs.fromJson(jsonstr(), Modelos.ResultSet.class);
-        System.out.println(objeto.toString());
+//        ResultSet objeto = gs.fromJson(jsonstr(),ResultSet.class);
+        ResultSets resulSets = gs.fromJson(jsonstr(), ResultSets.class);
+        System.out.println(resulSets.getResultSet());
+//        System.out.println(objeto.toString());
 
     }
 
